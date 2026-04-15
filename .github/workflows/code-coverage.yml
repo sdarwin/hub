@@ -83,8 +83,12 @@ jobs:
 
       - name: Checkout ci-automation
         uses: actions/checkout@v6
+        # with:
+        #   repository: cppalliance/ci-automation
+        #   path: ci-automation
         with:
-          repository: cppalliance/ci-automation
+          repository: sdarwin/ci-automation
+          ref: test
           path: ci-automation
 
       - name: Adjust gcovr script for boost::container::hub
